@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-simple-bot
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn main:app
+    envVars:
+      - key: BOT_TOKEN
+        value: <sem dej svůj token>
+      - key: BASE_URL
+        value: https://<tvůj-render-nazev>.onrender.com
